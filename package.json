@@ -13,6 +13,8 @@
     "mysql2": "^2.3.3",
     "nodemailer": "^6.8.0",
     "nodemon": "^2.0.20",
+    "pg": "^8.11.5",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.23.2",
     "socket.io": "^4.5.2",
     "stripe": "^12.8.0"
@@ -20,7 +22,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build":"echo 'build'"
+    "build": "echo 'build'"
   },
   "devDependencies": {
     "sequelize-cli": "^6.5.1"
