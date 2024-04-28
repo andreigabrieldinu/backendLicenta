@@ -11,12 +11,7 @@ const httpServer = require("http").createServer(app);
 
 dotenv.config();
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+app.use(cors());
 
 const io = require("socket.io")(httpServer, {
   cors: {
@@ -31,6 +26,10 @@ app.use(express.static(publicPathDirectory));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1", rootRouter);
+
+app.get("/test", (req, res) => {
+  res.send("Hello World");
+});
 
 sequelize
   .authenticate()
