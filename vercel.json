@@ -1,0 +1,11 @@
+{ "version": 2, 
+    "rewrites": 
+    [
+        { "source": "/(.*)",
+          "destination": "/api"
+        }
+    ],
+    "buildCommand": "echo 'build'",
+    "devCommand": "node index.js",
+    "outputDirectory": "."
+}
