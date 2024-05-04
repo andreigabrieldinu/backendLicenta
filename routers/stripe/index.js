@@ -9,7 +9,6 @@ const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
 stripeRouter.post("/", [authenticate], async (req, res) => {
   try {
-    console.log(process.env.CLIENT_URL);
     const { voucher } = req.body;
     let dbProducts = [];
     const array = req.url.split(",");
