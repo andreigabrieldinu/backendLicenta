@@ -1,7 +1,7 @@
 const nodeMailer = require("nodemailer");
 
-const adminEmail = "gdinu79@gmail.com";
-const adminPassword = "btylninkonpsjwbf";
+const adminEmail = process.env.ADMIN_EMAIL;
+const adminPassword = process.env.ADMIN_PASSWORD;
 
 const mailHost = "smtp.gmail.com";
 
